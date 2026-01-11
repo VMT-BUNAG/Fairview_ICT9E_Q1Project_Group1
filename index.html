@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBMC LP</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Gantari&family=Jaldi&family=Jura:wght@700&family=Gasoek+One&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        
+        body {
+            margin: 0;
+            background: url("bg.png") cover no-repeat;
+        }
+
+        .landingthingy {
+            position: relative;
+            width: 1440px;
+            height: 3064px;
+            margin: 0 auto;
+            background: #fafafa;
+        }
+
+        .logo {
+            position: absolute;
+            width: 560px;
+            height: 136px;
+            left: 0;
+            top: 7px;
+            background: url("logo.png") no-repeat center;
+        }
+
+        .portal, .help {
+            position: absolute;
+            width: 131px;
+            height: 33px;
+            border-radius: 40px;
+            box-shadow: 0 4px 4px rgba(0,0,0,.25);
+        }
+
+        .portal {
+            left:1094px; top:75px;
+            background: linear-gradient(180deg,#C1860C,#F0B961);
+        }
+
+        .help {
+            left:1253px; top:75px;
+            background: linear-gradient(180deg,#064D87,#011321);
+        }
+
+        .portal span, .help span {
+            position: absolute;
+            top:1px; left:0; right:0;
+            text-align:center;
+            font-family:'Kanit';
+            font-size:23px;
+            font-weight:700;
+            color:#fff;
+        }
+
+        .carousel {
+            position:absolute;
+            top:175px;
+            width:1440px;
+            height:487px;
+            overflow:hidden;
+        }
+
+        .carousel img {
+            position:absolute;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            opacity:0;
+            transition:opacity 1s;
+        }
+
+        .carousel img.active {opacity:1;}
+
+        .quick-btn {
+            width: 220px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0;           
+            text-align: center;
+
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            color: #003366;
+            text-decoration: none;
+        }
+
+        .quick-btn span {
+            display: block;
+            line-height: 1.2;
+        }
+
+        .cta {
+            position:absolute;
+            width:348px;
+            height:125px;
+            background:#fff;
+            border-radius:10px;
+            box-shadow:0 4px 4px rgba(0,0,0,.25);
+        }
+
+        .cta h2 {
+            font-family:'Kanit';
+            font-size:35px;
+            line-height:30px;
+            background:linear-gradient(180deg,#011321,#064D87);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .cta img {  position:absolute; }
+
+        .apply {left:166px; top:605px;}
+        .programs {left:551px; top:605px;}
+        .news {left:936px; top:605px;}
+
+        .program-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            text-align: left;
+        }
+
+        .program-card {
+            min-height: 420px;
+        }
+
+        .dots {
+            position: absolute;
+            left: 718px;
+            top: 775px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+
+            background: linear-gradient(180deg,#C1860C,#F0B961);
+        }
+        
+        .section-title {
+            position:absolute;
+            left:396px;
+            top:930px;
+            font-family:'Gantari';
+            font-size:36px;
+            font-weight: bold;
+            color:#0C4579;
+        }
+
+        .program {
+            position:absolute;
+            width:330px;
+            height:425px;
+            background:#EFEFEF;
+            border-radius:20px;
+            box-shadow:0 4px 4px rgba(0,0,0,.25);
+
+        }
+        .program img {
+            width:100%;
+            height:192px;
+            object-fit:cover;
+            border-radius:20px 20px 0 0;
+        }
+
+        .program h3 {
+            margin:16px;
+            font-family:'Kanit';
+            font-size:20px;
+            color:#0D4B83;
+        }
+
+        .program p {
+            margin:0 16px;
+            font-family:'Kanit';
+            font-size:14px;
+            font-weight:300;
+        }
+
+        .program button {
+            position:absolute;
+            bottom:16px;
+            right:16px;
+            background:linear-gradient(90deg,rgba(0,1,33,.82),#0C4579);
+            border:none;
+            color:#fff;
+            font-family:'Jaldi';
+            font-size:18px;
+            padding:6px 18px;
+            border-radius:22px;
+        }
+
+        .dotz {
+            position: absolute;
+            left: 718px;
+            top: 2045px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .dotz span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+
+            background: linear-gradient(180deg,#C1860C,#F0B961);
+        }
+
+        .footer-bg {
+            position:absolute;
+            top:2195px;
+            width:1441px;
+            height:487px;
+            background:url("wow.png") center/cover;
+        }
+
+        .footer-title {
+            position:absolute;
+            top:2307px;
+            left:400px;
+            width:640px;
+            font-weight: bold;
+            text-align:center;
+            font-family:'Kanit';
+            font-size:40px;
+            letter-spacing:.05em;
+            background:linear-gradient(180deg,#C1860C,#F5DA62);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta {
+            position: absolute;
+            width: 348px;
+            height: 125px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 4px rgba(0,0,0,.25);
+
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .cta img {
+            width: 64px;
+            height: auto;
+        }
+
+        .cta span {
+            font-family: 'Kanit';
+            font-size: 35px;
+            font-weight: 800;
+            line-height: 1.1;
+            text-align: left;
+
+            background: linear-gradient(180deg,#011321,#064D87);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .apply { left:166px; top:605px; }
+        .programs { left:551px; top:605px; }
+        .news { left:936px; top:605px; }
+
+        .ending span {
+            font-family: 'Kanit';
+            font-size: 35px;
+            font-weight: 800;
+            line-height: 1.1;
+            text-align: left;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-white navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href=""><img src="https://static1.squarespace.com/static/664c7ae50eea9c731b37e817/t/66a84103b86799259e31ff25/1722302723941/Header.png?format=1500w" width="300"></a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar" >
+       <ul class="navbar-nav me-auto" style="margin-left: 56%;">
+        <li class="nav-item">
+          <a class="nav-link" href=".html" style="color: rgba(24, 79, 136);"><b>Home</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=".html" style="color: rgba(24, 79, 136);"><b>About Us</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=".html" style="color: rgb(24, 79, 136);"><b>Campuses</b></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href=".html" style="color: rgb(24, 79, 136);"><b>Contact Us</b></a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href=".html" style="color: rgb(24, 79, 136);"><b><u>Enroll</u></b></a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  </nav>
+
+    <div class="portal"><span>PORTAL</span></div>
+    <div class="help"><span>GET HELP</span></div>
+
+  <div class="carousel">
+    <img src="header1.jpg" class="active">
+    <img src="header2.jpg">
+    <img src="header3.jpg">
+    <img src="header4.jpg">
+    <img src="header5.jpg">
+</div>
+
+    <a href="#" class="cta apply">
+        <img src="Screenshot_2025-04-25_at_9.47.56_PM-removebg-preview.png" alt="">
+        <span>APPLY TO<br>JOIN US</span>
+    </a>
+
+    <a href="#" class="cta programs">
+        <img src="Screenshot_2025-04-25_at_9.48.22_PM-removebg-preview.png" alt="">
+        <span>EXPLORE<br>PROGRAMS</span>
+    </a>
+
+    <a href="#" class="cta news">
+        <img src="Screenshot_2025-04-26_at_10.05.10_AM-removebg-preview.png" alt="">
+        <span>LATEST<br>NEWS</span>
+    </a>
+
+    <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="section-title">EXPLORE OUR ACADEMIC PROGRAMS</div>
+
+    <div class="program" style="left:124px; top:1058px;">
+        <img src="casa.png">
+        <h3>CASA / KINDERGARTEN</h3>
+        <p>Kindergarten is a gentle introduction to school where kids learn through play, imagination, and their first friendships.</p>
+        <button>View Program</button>
+    </div>
+
+    <div class="program" style="left:561px; top:1058px;">
+        <img src="primary.png">
+        <h3>PRIMARY GRADE SCHOOL</h3>
+        <p>Primary grade school is where children build foundational skills while beginning to explore the world beyond home.</p>
+        <button>View Program</button>
+    </div>
+
+    <div class="program" style="left:998px; top:1058px;">
+        <img src="inter.png">
+        <h3>INTERMEDIATE LEVEL</h3>
+        <p>A bridge between primary and junior high, where students start gaining responsibility and confidence in learning.</p>
+        <button>View Program</button>
+    </div>
+
+    <div class="program" style="left:350px; top:1516px;">
+        <img src="jhs.png">
+        <h3>JUNIOR HIGH SCHOOL</h3>
+        <p>A transitional stage where students navigate independence and the first real taste of academic pressure.</p>
+        <button>View Program</button>
+    </div>
+
+    <div class="program" style="left:778px; top:1516px;">
+        <img src="shs.png">
+        <h3>SENIOR HIGH SCHOOL</h3>
+        <p>Senior High School is apivotal time of self-discovery, deeper learning, and preparing for the leap into adulthood or future careers.</p>
+        <button>View Program</button>
+    </div>
+
+    <div class="dotz">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="footer-bg"></div>
+    <div class="footer-title">UNLEASH YOUR POTENTIAL AT OB MONTESSORI CENTER</div>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel img');
+        let index = 0;
+        setInterval(() => {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }, 3000);
+    </script>
+    
+</body>
+</html>
