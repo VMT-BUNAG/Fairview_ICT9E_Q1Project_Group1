@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us | OB Montessori</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Kanit', sans-serif;
+  background: #fafafa;
+}
+
+
+.navbar {
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+.contact-header {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.contact-header img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.contact-header img.active {
+  opacity: 1;
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(1,19,33,0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.header-overlay h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header-overlay p {
+  font-size: 14px;
+  color: #f5da62;
+}
+
+.contact-wrapper {
+  margin-top: -60px;
+  padding-bottom: 60px;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.contact-card h3 {
+  color: #184f88;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: #184f88;
+  box-shadow: 0 0 0 .15rem rgba(24,79,136,.25);
+}
+
+.send-btn {
+  background: linear-gradient(90deg, #0c4579, #184f88);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 35px;
+  font-weight: 600;
+}
+
+.info-panel {
+  background: #184f88;
+  color: white;
+  border-radius: 18px;
+  padding: 35px;
+  height: 100%;
+}
+
+.info-panel h5 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.info-panel p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.map-image {
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 18px;
+}
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-white navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href=""><img src="https://static1.squarespace.com/static/664c7ae50eea9c731b37e817/t/66a84103b86799259e31ff25/1722302723941/Header.png?format=1500w" width="300"></a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar" >
+       <ul class="navbar-nav me-auto" style="margin-left: 56%;">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" style="color: rgba(24, 79, 136);"><b>Home</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#courses" style="color: rgba(24, 79, 136);"><b>Courses</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page3.html" style="color: rgb(24, 79, 136);"><b>Enroll Now</b></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="page4.html" style="color: rgb(24, 79, 136);"><b>Contact Us</b></a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href=".html" style="color: rgb(24, 79, 136);"><b><u>Members</u></b></a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  </nav>
+
+<div class="contact-header">
+  <img src="contact1.jpg" class="active">
+  <img src="contact2.jpg">
+  <img src="contact3.jpg">
+
+  <div class="header-overlay">
+    <h1>CONTACT US</h1>
+    <p>Home / Contact Us</p>
+  </div>
+</div>
+
+<div class="container contact-wrapper">
+  <div class="row g-4">
+
+    <div class="col-lg-7">
+      <div class="contact-card">
+        <h3>We Got Your Back!</h3>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Your Name *</label>
+            <input type="text" class="form-control" placeholder="Ex. Juan Dela Cruz">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label>Email *</label>
+            <input type="email" class="form-control" placeholder="example@gmail.com">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label>Subject *</label>
+          <input type="text" class="form-control" placeholder="Enter subject">
+        </div>
+
+        <div class="mb-4">
+          <label>Your Message *</label>
+          <textarea class="form-control" rows="5" placeholder="Enter here..."></textarea>
+        </div>
+
+        <button class="send-btn">Send Message</button>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="col-lg-5">
+      <div class="info-panel">
+        <h5>Address</h5>
+        <p>Operation Brotherhood Montessori Center</p>
+        <p>Quezon City, Philippines</p>
+
+        <h5>Contact</h5>
+        <p>Email: info@obmontessori.edu.ph</p>
+        <p>Phone: (63+) 1234-5678</p>
+
+        <h5>Office Hours</h5>
+        <p>Monday – Friday</p>
+        <p>8:00 AM – 5:00 PM</p>
+      </div>
+    </div>
+
+  </div>
+
+  <img src="map.png" class="map-image" alt="Map">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const slides = document.querySelectorAll('.contact-header img');
+let current = 0;
+
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 4000);
+</script>
+
+</body>
+</html>
+
