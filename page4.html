@@ -2,135 +2,73 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact Us | OB Montessori</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Gantari&family=Jaldi&family=Jura:wght@700&family=Gasoek+One&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-body {
-  font-family: 'Kanit', sans-serif;
-  background: #fafafa;
+body{
+ background:#f4f4f4;
 }
 
 
-.navbar {
-  background: white;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+.contact-header{
+ background:#184f88;
+ color:white;
+ padding:60px 0;
+ text-align:center;
 }
 
 
-.contact-header {
-  position: relative;
-  height: 280px;
-  overflow: hidden;
+.contact-card{
+ background:white;
+ border-radius:18px;
+ padding:35px;
+ margin-top:-60px;
+ box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-.contact-header img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
+
+.info-card{
+ background:#184f88;
+ color:white;
+ border-radius:16px;
+ padding:25px;
 }
 
-.contact-header img.active {
-  opacity: 1;
+
+.info-card table td{
+ color:white;
+ font-size:0.9rem;
+ padding:4px;
 }
 
-.header-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(1,19,33,0.55);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
+
+.btn-send{
+ background:#f5b301;
+ border:none;
+ color:black;
+ padding:10px 22px;
+ border-radius:30px;
+ font-weight:bold;
 }
 
-.header-overlay h1 {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
 
-.header-overlay p {
-  font-size: 14px;
-  color: #f5da62;
-}
-
-.contact-wrapper {
-  margin-top: -60px;
-  padding-bottom: 60px;
-}
-
-.contact-card {
-  background: white;
-  border-radius: 18px;
-  padding: 35px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-.contact-card h3 {
-  color: #184f88;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-label {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.form-control {
-  border-radius: 10px;
-  padding: 12px;
-}
-
-.form-control:focus {
-  border-color: #184f88;
-  box-shadow: 0 0 0 .15rem rgba(24,79,136,.25);
-}
-
-.send-btn {
-  background: linear-gradient(90deg, #0c4579, #184f88);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 35px;
-  font-weight: 600;
-}
-
-.info-panel {
-  background: #184f88;
-  color: white;
-  border-radius: 18px;
-  padding: 35px;
-  height: 100%;
-}
-
-.info-panel h5 {
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-.info-panel p {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-.map-image {
-  width: 100%;
-  margin-top: 50px;
-  border-radius: 18px;
+.footer{
+ background:#184f88;
+ color:white;
+ padding:40px 0;
+ margin-top:60px;
 }
 </style>
 </head>
 
+
 <body>
+
 
     <nav class="navbar navbar-light bg-white navbar-expand-lg">
   <div class="container-fluid">
@@ -162,85 +100,139 @@ label {
   </div>
   </nav>
 
+
 <div class="contact-header">
-  <img src="contact1.jpg" class="active">
-  <img src="contact2.jpg">
-  <img src="contact3.jpg">
-
-  <div class="header-overlay">
-    <h1>CONTACT US</h1>
-    <p>Home / Contact Us</p>
-  </div>
+ <h1 class="fw-bold">Contact Us</h1>
+ <p>Home / Contact Us</p>
 </div>
 
-<div class="container contact-wrapper">
-  <div class="row g-4">
 
-    <div class="col-lg-7">
-      <div class="contact-card">
-        <h3>We Got Your Back!</h3>
+<div class="container">
+ <div class="contact-card">
+   <div class="row g-4">
 
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label>Your Name *</label>
-            <input type="text" class="form-control" placeholder="Ex. Juan Dela Cruz">
-          </div>
 
-          <div class="col-md-6 mb-3">
-            <label>Email *</label>
-            <input type="email" class="form-control" placeholder="example@gmail.com">
-          </div>
-        </div>
+     <div class="col-md-7">
+       <small class="text-muted">CONTACT US</small>
+       <h4 class="fw-bold mb-3">We Got Your Back!</h4>
 
-        <div class="mb-3">
-          <label>Subject *</label>
-          <input type="text" class="form-control" placeholder="Enter subject">
-        </div>
 
-        <div class="mb-4">
-          <label>Your Message *</label>
-          <textarea class="form-control" rows="5" placeholder="Enter here..."></textarea>
-        </div>
+       <input class="form-control mb-3" placeholder="Your Name">
+       <input class="form-control mb-3" placeholder="Email">
+       <input class="form-control mb-3" placeholder="Subject">
+       <textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
 
-        <button class="send-btn">Send Message</button>
-      </div>
-    </div>
 
-    <!-- INFO -->
-    <div class="col-lg-5">
-      <div class="info-panel">
-        <h5>Address</h5>
-        <p>Operation Brotherhood Montessori Center</p>
-        <p>Quezon City, Philippines</p>
+       <button class="btn-send">Send Message</button>
+     </div>
 
-        <h5>Contact</h5>
-        <p>Email: info@obmontessori.edu.ph</p>
-        <p>Phone: (63+) 1234-5678</p>
 
-        <h5>Office Hours</h5>
-        <p>Monday – Friday</p>
-        <p>8:00 AM – 5:00 PM</p>
-      </div>
-    </div>
+     <div class="col-md-5">
+       <div class="info-card">
 
-  </div>
 
-  <img src="map.png" class="map-image" alt="Map">
+         <h6 class="fw-bold">Address</h6>
+         <p>Operation Brotherhood Montessori Center</p>
+
+
+         <h6 class="fw-bold mt-3">Contact</h6>
+         <p>
+           Email: info@obmontessori.edu<br>
+           Phone: (02) 123-4567
+         </p>
+
+
+         <h6 class="fw-bold mt-3">School Office Hours</h6>
+         <table class="table table-sm mt-2">
+           <tbody>
+             <tr>
+               <td>Monday</td>
+               <td>8:00 AM – 4:00 PM</td>
+               <td>Registrar</td>
+             </tr>
+             <tr>
+               <td>Tuesday</td>
+               <td>8:00 AM – 4:00 PM</td>
+               <td>Accounting</td>
+             </tr>
+             <tr>
+               <td>Wednesday</td>
+               <td>8:00 AM – 4:00 PM</td>
+               <td>Guidance</td>
+             </tr>
+             <tr>
+               <td>Thursday</td>
+               <td>8:00 AM – 4:00 PM</td>
+               <td>Principal</td>
+             </tr>
+             <tr>
+               <td>Friday</td>
+               <td>8:00 AM – 3:00 PM</td>
+               <td>Admin</td>
+             </tr>
+           </tbody>
+         </table>
+
+
+         <h6 class="fw-bold mt-3">Stay Connected</h6>
+         <p>Facebook | Instagram | Email</p>
+
+
+       </div>
+     </div>
+
+
+   </div>
+ </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-const slides = document.querySelectorAll('.contact-header img');
-let current = 0;
+<div class="container mt-5">
+ <div class="contact-banner shadow-sm">
 
-setInterval(() => {
-  slides[current].classList.remove('active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('active');
-}, 4000);
-</script>
 
+   <div class="row align-items-center">
+
+
+     <div class="col-md-4 text-center mb-4 mb-md-0">
+       <img src="obmc logo.webp" class="img-fluid" style="max-width:280px;">
+     </div>
+
+
+     <div class="col-md-4">
+       <h4 class="contact-title">LOCATION</h4>
+       <div class="contact-list">
+         Angeles City, Pampanga<br>
+         Fairview, Quezon City<br>
+         Greenhills, San Juan City<br>
+         B.F. Homes, Las Piñas City<br>
+         Sta. Ana, Manila City
+       </div>
+     </div>
+
+
+     <div class="col-md-4">
+       <h4 class="contact-title">CONTACT</h4>
+       <div class="contact-list">
+         (02) 123-4567 <br><br>
+         <span class="contact-email">info@obmontessori.edu.ph</span>
+       </div>
+     </div>
+
+
+   </div>
+
+
+ </div>
+</div>
+
+
+<div class="footer text-center">
+ <p class="mb-0">© 2026 Operation Brotherhood Montessori Center</p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
